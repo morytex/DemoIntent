@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--Default input-->
+    <style name="defaultInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/default_vertical_paddding</item>
+    </style>
+
+    <!--Default button-->
+    <style name="defaultButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--Small center link-->
+    <style name="smallCenterLink">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:paddingTop">@dimen/default_vertical_paddding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@drawable/link</item>
+    </style>
+
+    <!--Password input-->
+    <style name="passwordInput" parent="defaultInput">
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+</resources>

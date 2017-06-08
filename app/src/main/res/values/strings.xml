@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DemoIntent</string>
+    <string name="login">Login</string>
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="create">Create</string>
+</resources>
