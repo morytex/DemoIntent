@@ -1,13 +1,14 @@
 package com.example.moryta.demointent;
 
+import android.Manifest;
 import android.content.Intent;
-import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.os.PersistableBundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             etUsername.setText(savedInstanceState.getString("USERNAME"));
         }
+
+        requestSmsPermission();
     }
 
     @OnClick(R.id.btSignIn)
@@ -64,4 +67,15 @@ public class LoginActivity extends AppCompatActivity {
 
         outState.putString("TEXTO", etUsername.getText().toString());
     }
+
+    private void requestSmsPermission() {
+        String permission = Manifest.permission.RECEIVE_SMS;
+        int grant = ContextCompat.checkSelfPermission(this, permission);
+        if ( grant != PackageManager.PERMISSION_GRANTED) {
+            String[] permission_list = new String[1];
+            permission_list[0] = permission;
+            ActivityCompat.requestPermissions(this, permission_list, 1);
+        }
+    }
+
 }
